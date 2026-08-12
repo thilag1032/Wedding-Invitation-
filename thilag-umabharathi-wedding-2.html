@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Thilag & Umabharathi — Wedding Invitation 🌸</title>
+
+<!-- ══ OPEN GRAPH — WhatsApp / Facebook / iMessage Preview ══ -->
+<meta property="og:title"       content="Thilag Selbanthiran & Umabharathi — Wedding Invitation 🌸">
+<meta property="og:description" content="Sunday, 23rd August 2026 · Sri Malaiyarasi Amman Kovil, Nedumaram, Sivaganga · Muhurtham 9:00 AM · You are cordially invited!">
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="SITE_URL_PLACEHOLDER">
+<!-- Add a preview image (800×420 px) for the WhatsApp / FB thumbnail:  -->
+<!-- <meta property="og:image" content="https://YOUR_SITE/preview.jpg"> -->
+<meta name="twitter:card"       content="summary_large_image">
+<meta name="theme-color"        content="#E8B86D">
+<!-- ══ END OPEN GRAPH ══ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Space+Mono:wght@400;700&family=Noto+Sans+Tamil:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════
+   COSMIC JEWEL THEME TOKENS
+══════════════════════════════════ */
+:root{
+  --bg:      #06080F;
+  --surface: #0B0E1C;
+  --surface2:#111526;
+  --surface3:#181D32;
+  --gold:    #E8B86D;
+  --gold-l:  #F7D898;
+  --gold-d:  #C49030;
+  --sage:    #2DD4AA;
+  --sage-l:  #70EDD6;
+  --sage-d:  #1A9E7E;
+  --marigold:#E8856A;
+  --bark:    #F0D8A8;
+  --txt:     #F2EEF8;
+  --txt-m:   #C2B2D8;
+  --txt-l:   #6A5E82;
+  --gb:      rgba(232,184,109,.20);
+  --gb2:     rgba(45,212,170,.18);
+  --sh:      0 2px 28px rgba(0,0,0,.65);
+  --sh2:     0 8px 56px rgba(0,0,0,.80);
+}
+
+/* ══════════════════════════════════
+   RESET & BASE
+══════════════════════════════════ */
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{font-size:16px;scroll-behavior:smooth;}
+body{
+  font-family:'Cormorant Garamond',serif;
+  background:var(--bg);color:var(--txt);
+  overflow-x:hidden;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ══════════════════════════════════
+   LANG BAR
+══════════════════════════════════ */
+#lang-bar{
+  position:fixed;top:0;left:0;right:0;z-index:900;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 20px;
+  background:rgba(6,8,15,.97);
+  border-bottom:1px solid var(--gb);
+  backdrop-filter:blur(8px);
+}
+.site-tag{font-family:'Space Mono',monospace;font-size:9px;color:var(--txt-l);letter-spacing:3px;}
+.lang-btns{display:flex;background:var(--surface2);border:1px solid var(--gb);border-radius:2px;overflow:hidden;}
+.lb{padding:5px 14px;border:none;background:transparent;color:var(--txt-m);font-family:'Space Mono',monospace;font-size:9px;cursor:pointer;transition:all .25s;letter-spacing:1px;}
+.lb.on{background:var(--gold);color:#06080F;}
+
+/* ══════════════════════════════════
+   CONFETTI
+══════════════════════════════════ */
+#cc{position:fixed;inset:0;pointer-events:none;z-index:800;}
+
+/* ══════════════════════════════════
+   SCROLL HINT & PROGRESS
+══════════════════════════════════ */
+#scroll-hint{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);z-index:600;opacity:0;transition:opacity .5s;pointer-events:none;}
+#scroll-hint.on{opacity:1;}
+.arrow-down{width:18px;height:18px;border-right:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:rotate(45deg);margin:0 auto;animation:bounce 1.6s ease-in-out infinite;}
+@keyframes bounce{0%,100%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(45deg) translateY(6px)}}
+.progress-line{position:fixed;top:41px;left:0;z-index:800;height:2px;background:var(--gold);transition:width .3s ease;pointer-events:none;width:0%;}
+
+/* ══════════════════════════════════
+   LANDING
+══════════════════════════════════ */
+#landing{
+  position:fixed;inset:0;z-index:700;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:linear-gradient(160deg,#0C1020 0%,#080B18 60%,#0A0D1A 100%);
+  transition:transform 1.8s cubic-bezier(.4,0,.15,1), opacity .8s ease 1.3s;
+  overflow:hidden;padding:30px 24px;text-align:center;
+}
+#landing.exit{transform:translateY(-100%);opacity:0;pointer-events:none;}
+#landing::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(45,212,170,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(232,184,109,.04) 1px,transparent 1px);
+  background-size:38px 38px;pointer-events:none;
+}
+.l-frame{position:absolute;inset:22px;border:1px solid rgba(232,184,109,.38);pointer-events:none;}
+.l-frame::after{content:'';position:absolute;inset:6px;border:1px solid rgba(232,184,109,.12);}
+.l-gem{position:absolute;width:9px;height:9px;background:var(--gold);transform:rotate(45deg);opacity:.5;}
+.l-gem.tl{top:-4px;left:-4px;}.l-gem.tr{top:-4px;right:-4px;}
+.l-gem.bl{bottom:-4px;left:-4px;}.l-gem.br{bottom:-4px;right:-4px;}
+.l-leaf{position:absolute;pointer-events:none;}
+.l-leaf.tl{top:0;left:0;transform:rotate(15deg);opacity:.35;}
+.l-leaf.tr{top:0;right:0;transform:rotate(-15deg) scaleX(-1);opacity:.35;}
+.l-leaf.bl{bottom:0;left:0;transform:rotate(-12deg);opacity:.18;}
+.l-leaf.br{bottom:0;right:0;transform:rotate(12deg) scaleX(-1);opacity:.18;}
+.l-content{position:relative;z-index:2;}
+.l-eyebrow{font-family:'Space Mono',monospace;font-size:8px;color:var(--sage-d);letter-spacing:6px;text-transform:uppercase;margin-bottom:22px;opacity:0;animation:riseIn .7s .3s forwards;}
+.l-name{font-family:'Cinzel',serif;font-weight:600;color:var(--gold-l);line-height:1.06;opacity:0;}
+.l-name.n1{font-size:clamp(20px,6vw,52px);animation:riseIn .8s .5s forwards;}
+.l-name.n2{font-size:clamp(22px,7vw,58px);animation:riseIn .8s .9s forwards;}
+.l-amp{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,4.5vw,32px);color:var(--txt-m);font-style:italic;display:block;margin:7px 0;opacity:0;animation:riseIn .6s .75s forwards;}
+.l-rule{display:flex;align-items:center;gap:14px;margin:20px auto;max-width:300px;opacity:0;animation:riseIn .6s 1.1s forwards;}
+.l-rule-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.l-location{font-size:clamp(10px,2.8vw,13px);color:var(--txt-m);letter-spacing:2.5px;font-style:italic;margin-bottom:30px;opacity:0;animation:riseIn .6s 1.2s forwards;}
+.l-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 40px;background:var(--gold-d);color:#EDE4D0;
+  font-family:'Cinzel',serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;
+  border:none;border-radius:1px;cursor:pointer;
+  box-shadow:0 4px 24px rgba(0,0,0,.5);
+  opacity:0;animation:riseIn .7s 1.6s forwards;transition:all .3s;
+}
+.l-btn:hover{background:var(--gold-l);color:#06080F;box-shadow:0 6px 32px rgba(0,0,0,.6);}
+.l-btn:active{transform:scale(.98);}
+@keyframes riseIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* ══════════════════════════════════
+   MAIN
+══════════════════════════════════ */
+#main{opacity:0;transition:opacity 1s ease 1s;pointer-events:none;}
+#main.on{opacity:1;pointer-events:all;}
+
+/* ══════════════════════════════════
+   SECTIONS
+══════════════════════════════════ */
+section{position:relative;}
+.sec-inner{max-width:600px;margin:0 auto;padding:72px 24px 60px;}
+.sec-label{font-family:'Space Mono',monospace;font-size:8px;color:var(--sage-d);letter-spacing:5px;text-transform:uppercase;margin-bottom:12px;display:block;}
+.sec-title{font-family:'Cinzel',serif;font-size:clamp(24px,6vw,40px);font-weight:600;color:var(--gold);line-height:1.1;margin-bottom:6px;}
+.sec-subtitle{font-size:15px;color:var(--txt-m);font-style:italic;margin-bottom:28px;}
+.hr{display:flex;align-items:center;gap:12px;margin:28px 0;}
+.hr-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gb) 40%,var(--gb) 60%,transparent);}
+.hr-leaf{color:var(--sage);font-size:13px;opacity:.8;}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .75s ease,transform .75s ease;}
+.reveal.vis{opacity:1;transform:translateY(0);}
+
+/* ══════════════════════════════════
+   HERO
+══════════════════════════════════ */
+#s-hero{background:var(--bg);border-bottom:1px solid var(--gb);}
+.hero-inner{
+  max-width:600px;margin:0 auto;padding:80px 24px 60px;
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+}
+.hero-eyebrow{font-family:'Space Mono',monospace;font-size:8px;color:var(--sage-d);letter-spacing:6px;text-transform:uppercase;margin-bottom:20px;}
+.hero-names{font-family:'Cinzel',serif;font-size:clamp(18px,5vw,42px);font-weight:600;color:var(--gold);line-height:1.15;}
+.hero-amp{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,4vw,26px);color:var(--txt-m);font-style:italic;display:block;margin:6px 0;}
+.hero-meta{font-size:14px;color:var(--txt-m);letter-spacing:2px;font-style:italic;margin:16px 0 8px;}
+.hero-venue{font-size:13px;color:var(--txt-l);letter-spacing:1px;margin-bottom:20px;}
+.hero-rule{display:flex;align-items:center;gap:14px;width:100%;max-width:340px;}
+.hero-rule-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+
+/* ══════════════════════════════════
+   EVENTS
+══════════════════════════════════ */
+#s-events{background:var(--surface);}
+.ev-list{display:grid;gap:14px;}
+.ev-item{
+  background:var(--surface2);border:1px solid var(--gb);border-radius:2px;
+  padding:24px 22px;position:relative;overflow:hidden;box-shadow:var(--sh);
+}
+.ev-item::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;}
+.ev-item.ceremony::before{background:linear-gradient(180deg,var(--gold-d),var(--gold));}
+.ev-item.hall::before{background:linear-gradient(180deg,var(--marigold),var(--gold));}
+.ev-item.feast::before{background:linear-gradient(180deg,var(--marigold),var(--gold));}
+.ev-item-tag{font-family:'Space Mono',monospace;font-size:7px;color:var(--txt-l);letter-spacing:3px;text-transform:uppercase;margin-bottom:4px;}
+.ev-item-name{font-family:'Cinzel',serif;font-size:18px;color:var(--gold);margin-bottom:14px;font-weight:600;}
+.ev-detail{display:flex;align-items:flex-start;gap:10px;margin-bottom:6px;font-size:14px;color:var(--txt);}
+.ev-detail-icon{font-size:13px;width:20px;flex-shrink:0;margin-top:3px;}
+.ev-note{font-size:14px;color:var(--txt-m);line-height:1.8;margin-top:4px;}
+.ev-note strong{color:var(--sage);}
+.ev-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;padding-top:14px;border-top:1px solid var(--gb);}
+.ev-action{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:7px 16px;background:transparent;
+  border:1px solid var(--gb);border-radius:1px;
+  color:var(--txt-m);font-size:10px;text-decoration:none;
+  font-family:'Space Mono',monospace;cursor:pointer;
+  transition:all .22s;letter-spacing:.5px;
+}
+.ev-action:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,.06);}
+.ev-action.maps:hover{border-color:var(--sage);color:var(--sage);background:rgba(125,184,130,.06);}
+
+/* ══════════════════════════════════
+   COUNTDOWN
+══════════════════════════════════ */
+#s-countdown{background:var(--surface2);border-top:1px solid var(--gb);border-bottom:1px solid var(--gb);}
+.cd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:4px;}
+.cd-box{
+  background:var(--surface3);border:1px solid var(--gb);border-radius:2px;
+  padding:16px 4px 12px;text-align:center;position:relative;overflow:hidden;box-shadow:var(--sh);
+}
+.cd-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.cd-num{font-family:'Cinzel',serif;font-size:clamp(26px,8vw,42px);font-weight:700;color:var(--gold-l);line-height:1;display:block;}
+.cd-num.pop{animation:numPop .28s ease;}
+@keyframes numPop{0%{transform:scale(1)}50%{transform:scale(1.12)}100%{transform:scale(1)}}
+.cd-unit{font-family:'Space Mono',monospace;font-size:clamp(6px,1.8vw,8px);color:var(--txt-l);letter-spacing:1.5px;margin-top:5px;display:block;text-transform:uppercase;}
+.cd-done{font-family:'Cinzel',serif;font-size:15px;color:var(--gold);margin-top:14px;display:none;text-align:center;}
+
+/* ══════════════════════════════════
+   FORMAL INVITATION
+══════════════════════════════════ */
+#s-invite{background:var(--bg);}
+.invite-card{
+  background:var(--surface);border:1px solid var(--gb);border-radius:2px;
+  padding:42px 30px;text-align:center;position:relative;overflow:hidden;box-shadow:var(--sh2);
+}
+.invite-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.invite-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.inv-wmark{position:absolute;font-size:120px;opacity:.04;pointer-events:none;top:50%;left:50%;transform:translate(-50%,-50%);}
+.inv-om{font-size:32px;margin-bottom:14px;}
+.inv-rule{display:flex;align-items:center;gap:10px;margin:16px auto;max-width:200px;}
+.inv-rule-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.inv-rule-dot{width:4px;height:4px;background:var(--gold);transform:rotate(45deg);opacity:.7;}
+.inv-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:15px;line-height:2.3;color:var(--bark);}
+.inv-en{font-size:14.5px;line-height:1.95;color:var(--txt-m);font-style:italic;}
+.inv-couple{font-family:'Cinzel',serif;font-size:clamp(15px,4vw,21px);color:var(--gold);line-height:1.5;font-weight:600;margin:14px 0;}
+.inv-couple-join{font-size:14px;color:var(--sage-d);font-family:'Cormorant Garamond',serif;font-style:italic;display:block;margin:4px 0;}
+
+.inv-date-stamp{
+  display:inline-block;margin-top:16px;padding:8px 24px;
+  background:var(--surface2);border:1px solid var(--gb);border-radius:1px;
+  font-family:'Space Mono',monospace;font-size:9px;color:var(--txt-m);letter-spacing:2px;
+}
+
+/* ══════════════════════════════════
+   RSVP
+══════════════════════════════════ */
+#s-rsvp{background:var(--surface);border-top:1px solid var(--gb);}
+.rsvp-card{
+  max-width:440px;margin:0 auto;
+  background:var(--surface2);border:1px solid var(--gb);border-radius:2px;
+  padding:32px 26px;box-shadow:var(--sh);position:relative;overflow:hidden;
+}
+.rsvp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.rsvp-note{font-size:14px;color:var(--txt-m);margin-bottom:20px;font-style:italic;text-align:center;}
+.rsvp-field{position:relative;margin-bottom:14px;}
+.rsvp-input{
+  width:100%;padding:13px 18px 13px 46px;
+  background:var(--surface3);border:1px solid var(--gb);border-radius:1px;
+  color:var(--txt);font-size:15px;font-family:'Cormorant Garamond',serif;outline:none;
+  transition:border-color .25s,box-shadow .25s;
+}
+.rsvp-input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(232,184,109,.14);}
+.rsvp-input::placeholder{color:var(--txt-l);font-style:italic;}
+.rsvp-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:15px;pointer-events:none;}
+.rsvp-err{color:#e07070;font-size:11px;margin-top:5px;display:none;font-family:'Space Mono',monospace;letter-spacing:.5px;}
+.rsvp-err.show{display:block;}
+.rsvp-btn{
+  width:100%;padding:15px;
+  background:var(--gold-d);color:#EDE4D0;
+  font-family:'Cinzel',serif;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;
+  border:none;border-radius:1px;cursor:pointer;
+  box-shadow:0 4px 20px rgba(0,0,0,.4);transition:all .25s;
+}
+.rsvp-btn:hover{background:var(--gold-l);color:#06080F;box-shadow:0 6px 28px rgba(0,0,0,.5);}
+.rsvp-btn:active{transform:scale(.99);}
+.rsvp-success{display:none;text-align:center;}
+.succ-icon{font-size:44px;animation:succPop .5s cubic-bezier(.175,.885,.32,1.275);}
+@keyframes succPop{0%{transform:scale(0)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
+.succ-title{font-family:'Cinzel',serif;font-size:18px;color:var(--gold);margin:12px 0 6px;font-weight:600;}
+.succ-name{display:inline-block;background:rgba(201,168,76,.08);border:1px solid var(--gb);padding:5px 20px;margin:8px 0;font-family:'Cinzel',serif;font-size:13px;color:var(--gold);}
+.succ-msg{font-size:14px;color:var(--txt-m);line-height:1.75;}
+.already-box{background:rgba(90,158,96,.08);border:1px solid var(--gb2);padding:12px 16px;font-size:12px;color:var(--sage);font-family:'Space Mono',monospace;display:none;margin-top:12px;border-radius:1px;}
+.already-box.show{display:block;}
+
+/* ══════════════════════════════════
+   FOOTER
+══════════════════════════════════ */
+footer{background:var(--surface);border-top:1px solid var(--gb);padding:28px 24px 80px;text-align:center;}
+.footer-names{font-family:'Cinzel',serif;font-size:15px;color:var(--gold);margin-bottom:6px;}
+.footer-sub{font-size:10px;color:var(--txt-l);letter-spacing:3px;font-family:'Space Mono',monospace;}
+.footer-leaves{margin-top:10px;font-size:15px;letter-spacing:8px;color:var(--sage);opacity:.5;}
+
+/* ══════════════════════════════════
+   SHARE FAB
+══════════════════════════════════ */
+#share-fab{
+  position:fixed;bottom:28px;right:20px;z-index:650;
+  opacity:0;transition:opacity .5s;pointer-events:none;
+}
+#share-fab.on{opacity:1;pointer-events:all;}
+.share-fab-btn{
+  width:52px;height:52px;
+  background:var(--gold-d);
+  border:none;border-radius:50%;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 24px rgba(0,0,0,.55);
+  transition:all .25s;color:#EDE4D0;font-size:20px;
+}
+.share-fab-btn:hover{background:var(--gold);transform:scale(1.06);}
+.share-fab-btn:active{transform:scale(.96);}
+
+/* ══════════════════════════════════
+   SHARE DRAWER
+══════════════════════════════════ */
+.share-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.7);
+  z-index:700;opacity:0;transition:opacity .3s;
+  pointer-events:none;
+}
+.share-overlay.on{opacity:1;pointer-events:all;}
+.share-panel{
+  position:fixed;bottom:0;left:0;right:0;z-index:710;
+  background:var(--surface2);
+  border-top:1px solid var(--gb);
+  border-radius:14px 14px 0 0;
+  padding:16px 24px 44px;
+  transform:translateY(100%);
+  transition:transform .38s cubic-bezier(.25,.8,.25,1);
+  max-width:540px;margin:0 auto;
+}
+.share-panel.on{transform:translateY(0);}
+.share-handle{width:40px;height:3px;background:var(--surface3);border:1px solid var(--gb);border-radius:2px;margin:0 auto 18px;}
+.share-head{font-family:'Cinzel',serif;font-size:16px;color:var(--gold);text-align:center;margin-bottom:22px;letter-spacing:1px;}
+.share-opts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.share-opt{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  padding:16px 6px 14px;
+  background:var(--surface3);border:1px solid var(--gb);border-radius:4px;
+  color:var(--txt-m);font-size:9px;font-family:'Space Mono',monospace;
+  letter-spacing:.5px;cursor:pointer;text-decoration:none;
+  transition:all .22s;border:none;width:100%;
+}
+.share-opt:hover{background:rgba(232,184,109,.1);outline:1px solid var(--gb);}
+.so-icon{font-size:22px;line-height:1;}
+/* copy toast */
+.copy-toast{
+  position:fixed;bottom:80px;left:50%;transform:translateX(-50%);
+  background:var(--surface3);border:1px solid var(--gb);
+  font-family:'Space Mono',monospace;font-size:10px;color:var(--gold);
+  padding:9px 20px;border-radius:2px;letter-spacing:1px;
+  opacity:0;transition:opacity .3s;pointer-events:none;z-index:800;
+  white-space:nowrap;
+}
+.copy-toast.on{opacity:1;}
+
+/* ══════════════════════════════════
+   WHATSAPP CHAT SECTION
+══════════════════════════════════ */
+#s-chat{background:var(--bg);}
+.chat-wrap{max-width:400px;margin:0 auto;}
+.chat-phone{
+  background:#0B141A;border-radius:14px;overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.05);
+}
+.chat-topbar{
+  background:#1F2C34;padding:10px 14px;
+  display:flex;align-items:center;gap:10px;
+}
+.chat-back{color:#8696A0;font-size:20px;line-height:1;cursor:default;}
+.chat-av{
+  width:38px;height:38px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--gold-d),var(--gold));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cinzel',serif;font-size:14px;font-weight:700;color:#06080F;
+}
+.chat-info .cname{color:#E9EDF0;font-size:15px;font-weight:500;line-height:1.2;}
+.chat-info .cstatus{color:#25D366;font-size:11.5px;}
+.chat-area{
+  height:440px;overflow-y:auto;
+  padding:12px 10px;
+  display:flex;flex-direction:column;gap:3px;
+  scroll-behavior:smooth;
+  background:#0B141A;
+}
+.chat-area::-webkit-scrollbar{width:3px;}
+.chat-area::-webkit-scrollbar-thumb{background:rgba(255,255,255,.08);border-radius:2px;}
+.chat-date-div{
+  align-self:center;margin:6px 0 10px;
+  background:rgba(17,27,33,.9);border-radius:6px;
+  padding:4px 12px;font-size:11px;color:#8696A0;letter-spacing:.4px;
+}
+.cmsg{
+  max-width:80%;padding:7px 10px 4px;
+  border-radius:7.5px;
+  font-size:13.5px;line-height:1.55;word-wrap:break-word;white-space:pre-wrap;
+  animation:msgIn .18s ease;margin-bottom:2px;
+}
+@keyframes msgIn{from{opacity:0;transform:scale(.95) translateY(4px)}to{opacity:1;transform:none}}
+.cmsg.in{background:#1F2C34;color:#E9EDF0;border-radius:0 7.5px 7.5px 7.5px;align-self:flex-start;}
+.cmsg.out{background:#005C4B;color:#E9EDF0;border-radius:7.5px 7.5px 0 7.5px;align-self:flex-end;}
+.cmsg-time{font-size:10px;color:#8696A0;margin-top:3px;text-align:right;display:block;}
+.cmsg.out .cmsg-time::after{content:' ✓✓';color:#53BDEB;}
+/* typing indicator */
+#typing-dot{
+  background:#1F2C34;border-radius:0 7.5px 7.5px 7.5px;
+  padding:11px 14px;align-self:flex-start;gap:4px;
+  display:none;margin-bottom:2px;
+}
+#typing-dot.on{display:flex;align-items:center;}
+.tdot{width:7px;height:7px;background:#8696A0;border-radius:50%;animation:tdot 1.2s ease-in-out infinite;}
+.tdot:nth-child(2){animation-delay:.2s;}
+.tdot:nth-child(3){animation-delay:.4s;}
+@keyframes tdot{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+/* bottom input bar (decorative) */
+.chat-inputbar{
+  background:#1F2C34;padding:8px 12px;
+  display:flex;align-items:center;gap:10px;
+  border-top:1px solid rgba(255,255,255,.04);
+}
+.chat-inputbar-field{
+  flex:1;background:#2A3942;border-radius:20px;
+  padding:8px 14px;color:#8696A0;font-size:13px;
+  border:none;outline:none;cursor:default;
+}
+.chat-send{
+  width:36px;height:36px;border-radius:50%;
+  background:#00A884;border:none;cursor:default;
+  display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;
+}
+/* replay button */
+.chat-replay-bar{
+  background:#1F2C34;padding:10px 14px;
+  display:flex;justify-content:center;
+  border-top:1px solid rgba(255,255,255,.04);
+}
+.replay-btn{
+  display:flex;align-items:center;gap:7px;
+  padding:7px 20px;background:transparent;
+  border:1px solid rgba(255,255,255,.12);border-radius:20px;
+  color:#8696A0;font-size:11px;font-family:'Space Mono',monospace;
+  cursor:pointer;transition:all .22s;letter-spacing:.5px;
+}
+.replay-btn:hover{border-color:var(--sage);color:var(--sage);}
+
+/* ══════════════════════════════════
+   MOBILE — PAGE-WISE & ALIGNMENT
+══════════════════════════════════ */
+@media (max-width:520px){
+
+  /* ── Page-wise snap scroll ── */
+  html{scroll-snap-type:y proximity;}
+  #s-hero,#s-chat,#s-events,#s-countdown,#s-invite,#s-rsvp{
+    scroll-snap-align:start;
+  }
+
+  /* ── Lang bar ── */
+  .site-tag{font-size:7px;letter-spacing:1.5px;}
+
+  /* ── Landing ── */
+  #landing{padding:20px 16px;}
+  .l-frame{inset:12px;}
+  .l-name.n1{font-size:clamp(18px,8.5vw,34px);}
+  .l-name.n2{font-size:clamp(20px,9.5vw,38px);}
+  .l-amp{font-size:clamp(16px,5vw,24px);margin:5px 0;}
+  .l-eyebrow{font-size:7px;letter-spacing:4px;margin-bottom:16px;}
+  .l-location{font-size:10px;letter-spacing:1.5px;margin-bottom:22px;}
+  .l-btn{padding:12px 28px;font-size:11px;letter-spacing:2px;}
+  .l-rule{margin:14px auto;}
+
+  /* ── Section inner ── */
+  .sec-inner{padding:48px 16px 40px;}
+  .sec-title{font-size:clamp(20px,7.5vw,30px);}
+  .sec-subtitle{font-size:13px;}
+  .sec-label{font-size:7px;letter-spacing:3px;}
+
+  /* ── Hero ── */
+  .hero-inner{padding:56px 16px 40px;text-align:center;}
+  .hero-names{font-size:clamp(15px,6vw,26px);text-align:center;width:100%;}
+  .hero-amp{font-size:clamp(14px,4.5vw,20px);}
+  .hero-meta{font-size:13px;letter-spacing:1px;}
+  .hero-venue{font-size:12px;letter-spacing:.5px;}
+
+  /* ── Event cards ── */
+  .ev-item{padding:16px 14px 16px 18px;}
+  .ev-item-name{font-size:15px;margin-bottom:10px;}
+  .ev-detail{font-size:13px;gap:8px;margin-bottom:5px;}
+  .ev-detail-icon{font-size:12px;width:18px;margin-top:2px;}
+  .ev-note{font-size:13px;}
+  .ev-actions{gap:6px;margin-top:12px;padding-top:10px;}
+  .ev-action{padding:6px 11px;font-size:9px;gap:4px;}
+  .ev-list{gap:12px;}
+
+  /* ── Countdown ── */
+  .cd-grid{gap:8px;}
+  .cd-box{padding:12px 2px 10px;}
+  .cd-num{font-size:clamp(24px,9vw,36px);}
+  .cd-unit{font-size:6px;letter-spacing:1px;}
+
+  /* ── Invite card ── */
+  .invite-card{padding:28px 16px;}
+  .inv-om{font-size:26px;}
+  .inv-ta{font-size:13.5px;line-height:2.1;}
+  .inv-en{font-size:13px;line-height:1.85;}
+  .inv-couple{font-size:clamp(13px,4.5vw,17px);line-height:1.5;}
+  .inv-date-stamp{font-size:8px;letter-spacing:1px;padding:7px 14px;}
+
+  /* ── RSVP ── */
+  .rsvp-card{padding:22px 14px;}
+  .rsvp-input{font-size:14px;padding:11px 14px 11px 40px;}
+  .rsvp-icon{font-size:13px;left:12px;}
+  .rsvp-btn{font-size:12px;letter-spacing:2px;padding:13px;}
+  .rsvp-note{font-size:13px;}
+
+  /* ── WhatsApp chat ── */
+  .chat-wrap{max-width:100%;}
+  .chat-phone{border-radius:10px;}
+  .chat-area{height:360px;padding:10px 8px;}
+  .cmsg{font-size:13px;max-width:83%;padding:6px 9px 4px;}
+  .cmsg-time{font-size:9.5px;}
+  .chat-topbar{padding:8px 12px;gap:8px;}
+  .chat-av{width:34px;height:34px;font-size:13px;}
+  .chat-info .cname{font-size:14px;}
+  .chat-info .cstatus{font-size:10.5px;}
+  .chat-inputbar-field{font-size:12px;padding:7px 12px;}
+  .chat-send{width:32px;height:32px;font-size:14px;}
+
+  /* ── Share drawer ── */
+  .share-opts{grid-template-columns:repeat(3,1fr);gap:8px;}
+  .share-opt{padding:14px 4px 12px;font-size:8.5px;}
+  .so-icon{font-size:20px;}
+  .share-panel{padding:14px 16px 48px;}
+  .share-head{font-size:14px;margin-bottom:16px;}
+
+  /* ── HR dividers ── */
+  .hr{margin:20px 0;}
+
+  /* ── Footer ── */
+  footer{padding:24px 16px 80px;}
+  .footer-names{font-size:14px;}
+  .footer-sub{font-size:9px;letter-spacing:1.5px;}
+
+  /* ── Share FAB ── */
+  #share-fab{bottom:20px;right:16px;}
+  .share-fab-btn{width:48px;height:48px;font-size:18px;}
+
+  /* ── Scroll hint ── */
+  #scroll-hint{bottom:76px;}
+}
+
+/* ══════════════════════════════════
+   COSMIC VISUAL EFFECTS
+══════════════════════════════════ */
+
+/* Gradient progress bar */
+.progress-line{background:linear-gradient(90deg,var(--gold),var(--sage),var(--gold-l)) !important;}
+
+/* Landing: cosmic atmosphere overlay */
+#landing::after{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 22% 22%,rgba(45,212,170,.09) 0%,transparent 48%),
+    radial-gradient(ellipse at 78% 78%,rgba(232,184,109,.09) 0%,transparent 48%),
+    radial-gradient(ellipse at 60% 15%,rgba(155,143,208,.06) 0%,transparent 35%);
+  pointer-events:none;z-index:1;
+}
+.l-content{z-index:3;}
+
+/* Gradient text — landing names */
+.l-name{
+  background:linear-gradient(135deg,var(--gold-l) 0%,var(--gold) 60%,var(--sage) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+
+/* Gradient text — section titles */
+.sec-title{
+  background:linear-gradient(135deg,var(--gold-l) 0%,var(--gold) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+
+/* Gradient text — countdown numbers */
+.cd-num{
+  background:linear-gradient(180deg,var(--gold-l) 0%,var(--sage) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+
+/* Gradient text — invite couple names */
+.inv-couple{
+  background:linear-gradient(135deg,var(--gold-l),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+
+/* Hero section — central radial glow */
+#s-hero{overflow:hidden;}
+#s-hero::after{
+  content:'';position:absolute;
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  width:min(520px,100vw);height:min(520px,100vw);
+  background:radial-gradient(circle,rgba(232,184,109,.06) 0%,rgba(45,212,170,.04) 40%,transparent 70%);
+  pointer-events:none;
+}
+
+/* Events section — subtle warm glow on ceremony card */
+.ev-item.ceremony{box-shadow:var(--sh),-3px 0 20px rgba(232,184,109,.12);}
+.ev-item.hall{box-shadow:var(--sh),-3px 0 20px rgba(232,133,106,.12);}
+.ev-item.feast{box-shadow:var(--sh),-3px 0 20px rgba(232,133,106,.10);}
+
+/* Countdown section — gradient bg */
+#s-countdown{background:linear-gradient(160deg,#08091A 0%,#0B0E1C 100%);}
+.cd-box::before{background:linear-gradient(90deg,transparent,var(--sage),transparent);}
+.cd-box{box-shadow:var(--sh),0 0 20px rgba(45,212,170,.05);}
+
+/* Invite card — golden atmosphere */
+.invite-card{box-shadow:var(--sh2),0 0 80px rgba(232,184,109,.08);}
+.invite-card::before{background:linear-gradient(90deg,transparent,var(--gold),var(--sage),var(--gold),transparent);}
+
+/* RSVP button — gradient */
+.rsvp-btn{
+  background:linear-gradient(135deg,var(--gold-d) 0%,var(--gold) 100%);
+  color:#06080F;
+}
+
+/* Landing button — gradient */
+.l-btn{
+  background:linear-gradient(135deg,var(--gold-d),var(--gold));
+  color:#06080F;
+}
+
+/* Invite card Om symbol glow */
+.inv-om{filter:drop-shadow(0 0 12px rgba(232,184,109,.4));}
+
+/* Success icon glow */
+.succ-icon{filter:drop-shadow(0 0 10px rgba(232,184,109,.5));}
+
+/* Success title gradient */
+.succ-title{
+  background:linear-gradient(135deg,var(--gold-l),var(--gold));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+
+/* Teal accent on hr leaf */
+.hr-leaf{color:var(--sage);text-shadow:0 0 8px rgba(45,212,170,.4);}
+
+/* Gold gem glow */
+.l-gem{box-shadow:0 0 6px rgba(232,184,109,.5);}
+
+/* Invite section — subtle gradient bg */
+#s-invite{background:linear-gradient(180deg,var(--bg) 0%,#09091A 100%);}
+
+/* Footer gradient */
+footer{background:linear-gradient(180deg,var(--surface) 0%,#080910 100%);}
+
+/* ══════════════════════════════════
+   LANGUAGE HELPERS
+══════════════════════════════════ */
+.ta-only{display:none!important;}
+body[data-lang="ta"] .ta-only{display:block!important;font-family:'Noto Sans Tamil',sans-serif!important;}
+body[data-lang="ta"] .en-only{display:none!important;}
+body[data-lang="ta"] span.ta-only{display:inline!important;}
+body[data-lang="en"] span.ta-only{display:none!important;}
+</style>
+</head>
+<body data-lang="en">
+
+<!-- Lang bar -->
+<div id="lang-bar">
+  <span class="site-tag">✦ WEDDING INVITATION</span>
+  <div class="lang-btns">
+    <button class="lb on" onclick="setLang('en')">EN</button>
+    <button class="lb" onclick="setLang('ta')">தமிழ்</button>
+  </div>
+</div>
+
+<canvas id="cc"></canvas>
+<div id="scroll-hint"><div class="arrow-down"></div></div>
+<div class="progress-line" id="progress-line"></div>
+
+<!-- ── Share FAB ── -->
+<div id="share-fab">
+  <button class="share-fab-btn" onclick="openShare()" aria-label="Share Invitation">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+    </svg>
+  </button>
+</div>
+
+<!-- ── Share Drawer ── -->
+<div class="share-overlay" id="share-overlay" onclick="closeShare()"></div>
+<div class="share-panel" id="share-panel">
+  <div class="share-handle"></div>
+  <div class="share-head en-only">Share This Invitation</div>
+  <div class="share-head ta-only">அழைப்பிதழ் பகிருங்கள்</div>
+  <div class="share-opts">
+    <a class="share-opt" id="sd-wa" href="#" target="_blank" rel="noopener" onclick="closeShare()">
+      <span class="so-icon">💬</span>
+      <span class="en-only">WhatsApp</span>
+      <span class="ta-only">WhatsApp</span>
+    </a>
+    <button class="share-opt" onclick="copyLink()">
+      <span class="so-icon">🔗</span>
+      <span class="en-only">Copy Link</span>
+      <span class="ta-only">Copy Link</span>
+    </button>
+    <a class="share-opt" id="sd-sms" href="#" onclick="closeShare()">
+      <span class="so-icon">📱</span>
+      <span class="en-only">SMS</span>
+      <span class="ta-only">SMS</span>
+    </a>
+    <button class="share-opt" id="sd-native" onclick="nativeShare()" style="display:none">
+      <span class="so-icon">↑</span>
+      <span class="en-only">More</span>
+      <span class="ta-only">More</span>
+    </button>
+  </div>
+</div>
+
+<!-- Copy toast -->
+<div class="copy-toast" id="copy-toast">✓ Link copied!</div>
+
+<!-- ════════════════════════════════════
+     LANDING
+════════════════════════════════════ -->
+<div id="landing">
+  <div class="l-frame">
+    <div class="l-gem tl"></div><div class="l-gem tr"></div>
+    <div class="l-gem bl"></div><div class="l-gem br"></div>
+  </div>
+
+  <svg class="l-leaf tl" width="130" height="130" viewBox="0 0 130 130" fill="none">
+    <path d="M12 118 Q35 65 90 18 Q68 52 55 86 Q78 44 108 10" stroke="#2DD4AA" stroke-width="1.4" fill="none"/>
+    <ellipse cx="58" cy="52" rx="20" ry="11" transform="rotate(-42 58 52)" fill="#6EEBD4" opacity=".65"/>
+    <ellipse cx="78" cy="32" rx="15" ry="9" transform="rotate(-57 78 32)" fill="#2DD4AA" opacity=".55"/>
+    <ellipse cx="40" cy="74" rx="18" ry="10" transform="rotate(-22 40 74)" fill="#6EEBD4" opacity=".58"/>
+    <circle cx="108" cy="10" r="2.5" fill="#E8B86D" opacity=".45"/>
+  </svg>
+  <svg class="l-leaf tr" width="130" height="130" viewBox="0 0 130 130" fill="none">
+    <path d="M12 118 Q35 65 90 18 Q68 52 55 86 Q78 44 108 10" stroke="#2DD4AA" stroke-width="1.4" fill="none"/>
+    <ellipse cx="58" cy="52" rx="20" ry="11" transform="rotate(-42 58 52)" fill="#6EEBD4" opacity=".65"/>
+    <ellipse cx="78" cy="32" rx="15" ry="9" transform="rotate(-57 78 32)" fill="#2DD4AA" opacity=".55"/>
+  </svg>
+  <svg class="l-leaf bl" width="100" height="100" viewBox="0 0 100 100" fill="none">
+    <path d="M10 10 Q32 52 82 82" stroke="#E8B86D" stroke-width="1.1" fill="none"/>
+    <ellipse cx="46" cy="46" rx="14" ry="7" transform="rotate(42 46 46)" fill="#F7D898" opacity=".30"/>
+    <ellipse cx="64" cy="64" rx="11" ry="6" transform="rotate(57 64 64)" fill="#E8B86D" opacity=".24"/>
+  </svg>
+  <svg class="l-leaf br" width="100" height="100" viewBox="0 0 100 100" fill="none">
+    <path d="M10 10 Q32 52 82 82" stroke="#E8B86D" stroke-width="1.1" fill="none"/>
+    <ellipse cx="46" cy="46" rx="14" ry="7" transform="rotate(42 46 46)" fill="#F7D898" opacity=".30"/>
+    <ellipse cx="64" cy="64" rx="11" ry="6" transform="rotate(57 64 64)" fill="#E8B86D" opacity=".24"/>
+  </svg>
+
+  <div class="l-content">
+    <div class="l-eyebrow en-only">✦ Wedding Invitation ✦</div>
+    <div class="l-eyebrow ta-only">✦ திருமண அழைப்பிதழ் ✦</div>
+
+    <div class="l-name n1 en-only">Thilag Selbanthiran</div>
+    <div class="l-name n1 ta-only">திலக்செல்பந்திரன்</div>
+    <div class="l-amp">&amp;</div>
+    <div class="l-name n2 en-only">Umabharathi</div>
+    <div class="l-name n2 ta-only">உமாபாரதி</div>
+
+    <div class="l-rule">
+      <div class="l-rule-line"></div>
+      <span style="color:var(--sage);font-size:14px;">🌸</span>
+      <div class="l-rule-line"></div>
+    </div>
+
+    <div class="l-location en-only">23rd August 2026 &ensp;·&ensp; Nedumaram, Sivaganga</div>
+    <div class="l-location ta-only">23 ஆகஸ்ட் 2026 &ensp;·&ensp; நேடுமரம், சிவகங்கை</div>
+
+    <button class="l-btn" onclick="enterSite()">
+      <span class="en-only">View Invitation</span>
+      <span class="ta-only">அழைப்பிதழ் திறக்கவும்</span>
+    </button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════ -->
+<div id="main">
+
+  <!-- HERO -->
+  <section id="s-hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow reveal en-only">Together in Love</div>
+      <div class="hero-eyebrow reveal ta-only">அன்பில் ஒன்றாக</div>
+      <div class="hero-names reveal" style="transition-delay:.05s">
+        <span class="en-only">C.C.T. Thilag Selbanthiran</span>
+        <span class="ta-only">C.C.T. திலக்செல்பந்திரன்</span>
+        <div class="hero-amp">&amp;</div>
+        <span class="en-only">S. Umabharathi</span>
+        <span class="ta-only">S. உமாபாரதி</span>
+      </div>
+      <div class="hero-meta reveal" style="transition-delay:.1s">
+        <span class="en-only">Sunday, 23rd August 2026</span>
+        <span class="ta-only">ஞாயிற்றுக்கிழமை, 23 ஆகஸ்ட் 2026</span>
+      </div>
+      <div class="hero-venue reveal" style="transition-delay:.12s">
+        <span class="en-only">Nedumaram, Sivaganga District, Tamil Nadu</span>
+        <span class="ta-only">நேடுமரம், சிவகங்கை மாவட்டம், தமிழ்நாடு</span>
+      </div>
+      <div class="hero-rule reveal" style="transition-delay:.15s">
+        <div class="hero-rule-line"></div>
+        <span style="color:var(--sage);font-size:15px;">🌸</span>
+        <div class="hero-rule-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHATSAPP CHAT PRANK REVEAL -->
+  <section id="s-chat">
+    <div class="sec-inner">
+      <div class="reveal" style="text-align:center;margin-bottom:28px;">
+        <span class="sec-label en-only">How it started 😄</span>
+        <span class="sec-label ta-only">இப்படித்தான் ஆச்சு 😄</span>
+        <h2 class="sec-title en-only">The Message That Started It All</h2>
+        <h2 class="sec-title ta-only">அந்த Message</h2>
+        <p class="sec-subtitle en-only">Read on — this is how we found out 👇</p>
+        <p class="sec-subtitle ta-only">படிங்க — இப்படித்தான் தெரிஞ்சுது 👇</p>
+      </div>
+
+      <div class="chat-wrap reveal" style="transition-delay:.1s">
+        <div class="chat-phone">
+          <!-- Header -->
+          <div class="chat-topbar">
+            <span class="chat-back">&#8592;</span>
+            <div class="chat-av">T</div>
+            <div class="chat-info">
+              <div class="cname">Thilag 🌸</div>
+              <div class="cstatus">online</div>
+            </div>
+          </div>
+
+          <!-- Chat messages area -->
+          <div class="chat-area" id="chat-area">
+            <div class="chat-date-div">Today</div>
+            <!-- Messages injected here by JS -->
+            <div id="typing-dot">
+              <div class="tdot"></div>
+              <div class="tdot"></div>
+              <div class="tdot"></div>
+            </div>
+          </div>
+
+          <!-- Decorative input bar -->
+          <div class="chat-inputbar">
+            <div class="chat-inputbar-field">Message</div>
+            <div class="chat-send">&#10148;</div>
+          </div>
+
+          <!-- Replay -->
+          <div class="chat-replay-bar">
+            <button class="replay-btn" onclick="replayChat()">&#8635; Replay</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hr reveal" style="transition-delay:.2s;margin-top:32px;">
+        <div class="hr-line"></div><div class="hr-leaf">🌸</div><div class="hr-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="s-events">
+    <div class="sec-inner">
+      <div class="reveal">
+        <span class="sec-label en-only">Event Schedule</span>
+        <span class="sec-label ta-only">நிகழ்வு அட்டவணை</span>
+        <h2 class="sec-title en-only">Wedding Day</h2>
+        <h2 class="sec-title ta-only">திருமண நாள்</h2>
+        <p class="sec-subtitle en-only">Sunday, 23rd August 2026</p>
+        <p class="sec-subtitle ta-only">ஞாயிற்றுக்கிழமை, 23 ஆகஸ்ட் 2026</p>
+      </div>
+
+      <div class="ev-list">
+
+        <!-- Wedding Ceremony -->
+        <div class="ev-item ceremony reveal" style="transition-delay:.08s">
+          <div class="ev-item-tag en-only">Auspicious Muhurtham</div>
+          <div class="ev-item-tag ta-only">திருமண முகூர்த்தம்</div>
+          <div class="ev-item-name en-only">Wedding Ceremony</div>
+          <div class="ev-item-name ta-only">திருமண விழா</div>
+          <div class="ev-detail">
+            <span class="ev-detail-icon">⏰</span>
+            <span>
+              <span class="en-only">9:00 AM – 10:30 AM &nbsp;(Muhurtham)</span>
+              <span class="ta-only">காலை 9:00 – 10:30 (முகூர்த்தம்)</span>
+            </span>
+          </div>
+          <div class="ev-detail">
+            <span class="ev-detail-icon">🛕</span>
+            <span>
+              <span class="en-only">Sri Malaiyarasi Amman Kovil,<br>Nedumaram, Sivaganga District</span>
+              <span class="ta-only">ஸ்ரீ மலையரசி அம்மன் கோவில்,<br>நேடுமரம், சிவகங்கை மாவட்டம்</span>
+            </span>
+          </div>
+          <div class="ev-actions">
+            <a class="ev-action" onclick="return addToCalendar('ceremony')">📅
+              <span class="en-only">Add to Calendar</span>
+              <span class="ta-only">Calendar</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Photos & Lunch at Hall -->
+        <div class="ev-item hall reveal" style="transition-delay:.16s">
+          <div class="ev-item-tag en-only">Photos &amp; Lunch</div>
+          <div class="ev-item-tag ta-only">புகைப்படம் &amp; விருந்து</div>
+          <div class="ev-item-name en-only">Alagappa Packiam Wedding Hall</div>
+          <div class="ev-item-name ta-only">அழகப்பா பாக்கியம் வெட்டிங் ஹால்</div>
+          <div class="ev-detail">
+            <span class="ev-detail-icon">⏰</span>
+            <span>
+              <span class="en-only">10:30 AM onwards</span>
+              <span class="ta-only">காலை 10:30 மணி முதல்</span>
+            </span>
+          </div>
+          <div class="ev-detail">
+            <span class="ev-detail-icon">📍</span>
+            <span>
+              <span class="en-only">Alagappa Packiam Wedding Hall,<br>Tirupattur, Sivaganga District</span>
+              <span class="ta-only">அழகப்பா பாக்கியம் வெட்டிங் ஹால்,<br>திருப்பத்தூர், சிவகங்கை மாவட்டம்</span>
+            </span>
+          </div>
+          <div class="ev-actions">
+            <a class="ev-action" onclick="return addToCalendar('hall')">📅
+              <span class="en-only">Add to Calendar</span>
+              <span class="ta-only">Calendar</span>
+            </a>
+            <a class="ev-action maps" href="https://maps.app.goo.gl/2j5orM2XJYfJ4pLE7" target="_blank" rel="noopener">📍
+              <span class="en-only">Get Directions</span>
+              <span class="ta-only">வழிகாட்டி</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Vegetarian Feast -->
+        <div class="ev-item feast reveal" style="transition-delay:.24s">
+          <div class="ev-item-tag" style="color:var(--marigold);">🍗 Dining</div>
+          <div class="ev-note en-only">
+            <strong style="color:var(--marigold);">Non-Veg Feast</strong> — Chicken &amp; Mutton — a rich, flavourful spread will be served at the wedding hall from 10:30 AM.<br><br>
+            <em style="color:var(--txt-l);">Come hungry — we've got you covered! 🥩</em>
+          </div>
+          <div class="ev-note ta-only">
+            <strong style="color:var(--marigold);">அசைவ விருந்து</strong> — சிக்கன் &amp; மட்டன் உட்பட சுவையான உணவுகள் மண்டபத்தில் காலை 10:30 மணி முதல் பரிமாறப்படும்.<br><br>
+            <em style="color:var(--txt-l);">பசியோட வாங்க — விருந்து ரெடி! 🥩</em>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hr reveal" style="transition-delay:.3s">
+        <div class="hr-line"></div><div class="hr-leaf">🌿</div><div class="hr-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section id="s-countdown">
+    <div class="sec-inner" style="padding-top:56px;padding-bottom:52px;">
+      <div class="reveal" style="text-align:center;margin-bottom:28px;">
+        <span class="sec-label en-only">Counting Down</span>
+        <span class="sec-label ta-only">கவுண்ட்டவுன்</span>
+        <h2 class="sec-title en-only">Until the Big Day</h2>
+        <h2 class="sec-title ta-only">திருமண நாள் வரை</h2>
+        <p class="sec-subtitle en-only">23rd August 2026 · Muhurtham 9:00 AM</p>
+        <p class="sec-subtitle ta-only">23 ஆகஸ்ட் 2026 · முகூர்த்தம் காலை 9:00</p>
+      </div>
+      <div class="cd-grid reveal" style="max-width:440px;margin:0 auto;transition-delay:.1s">
+        <div class="cd-box"><span class="cd-num" id="cd-d">00</span><span class="cd-unit en-only">Days</span><span class="cd-unit ta-only">நாட்கள்</span></div>
+        <div class="cd-box"><span class="cd-num" id="cd-h">00</span><span class="cd-unit en-only">Hours</span><span class="cd-unit ta-only">மணி</span></div>
+        <div class="cd-box"><span class="cd-num" id="cd-m">00</span><span class="cd-unit en-only">Mins</span><span class="cd-unit ta-only">நிமிடம்</span></div>
+        <div class="cd-box"><span class="cd-num" id="cd-s">00</span><span class="cd-unit en-only">Secs</span><span class="cd-unit ta-only">வினாடி</span></div>
+      </div>
+      <div class="cd-done" id="cd-done">
+        <span class="en-only">🎊 The auspicious day is here — congratulations!</span>
+        <span class="ta-only">🎊 திருமண நாள் வந்தது — வாழ்த்துக்கள்!</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMAL INVITATION -->
+  <section id="s-invite">
+    <div class="sec-inner">
+      <div class="reveal" style="text-align:center;margin-bottom:28px;">
+        <span class="sec-label en-only">Formal Invitation</span>
+        <span class="sec-label ta-only">அழைப்பிதழ்</span>
+        <h2 class="sec-title en-only">You Are Cordially Invited</h2>
+        <h2 class="sec-title ta-only">அன்புடன் அழைக்கிறோம்</h2>
+      </div>
+
+      <div class="invite-card reveal" style="transition-delay:.1s">
+        <div class="inv-wmark">🕉</div>
+        <div class="inv-om">🕉️</div>
+        <div class="inv-rule"><div class="inv-rule-line"></div><div class="inv-rule-dot"></div><div class="inv-rule-line"></div></div>
+
+        <div class="inv-ta">
+          நீங்களும் உங்கள் குடும்பத்தினருடன்<br>
+          கலந்துகொண்டு மணமக்களை வாழ்த்தி<br>
+          திருமண விழாவை சிறப்பிக்க<br>
+          அன்புடன் வருக 🙏
+        </div>
+
+        <div class="inv-rule" style="margin:20px auto;"><div class="inv-rule-line"></div><div class="inv-rule-dot"></div><div class="inv-rule-line"></div></div>
+
+        <div class="inv-couple">
+          C.C.T. Thilag Selbanthiran
+          <span class="inv-couple-join">weds</span>
+          S. Umabharathi
+        </div>
+
+
+        <div class="inv-rule" style="margin:20px auto;"><div class="inv-rule-line"></div><div class="inv-rule-dot"></div><div class="inv-rule-line"></div></div>
+
+        <div class="inv-en en-only">
+          We joyfully request the honour of your presence<br>
+          at the wedding celebration of our beloved children.<br>
+          Your blessings will make this occasion truly special.
+        </div>
+        <div class="inv-en ta-only">
+          உங்கள் குடும்பத்துடன் வந்து எங்கள்<br>
+          திருமண விழாவில் கலந்துகொண்டு<br>
+          ஆசீர்வதிக்க வேண்டுகிறோம்.
+        </div>
+
+        <div class="inv-date-stamp">
+          <span class="en-only">23 AUGUST 2026 · NEDURUM · PUDUKKOTTAI</span>
+          <span class="ta-only">23 ஆகஸ்ட் 2026 · நேடுமரம் · சிவகங்கை</span>
+        </div>
+      </div>
+
+      <div class="hr reveal" style="transition-delay:.2s"><div class="hr-line"></div><div class="hr-leaf">🌸</div><div class="hr-line"></div></div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="s-rsvp">
+    <div class="sec-inner">
+      <div class="reveal" style="text-align:center;margin-bottom:28px;">
+        <span class="sec-label en-only">Kindly Respond</span>
+        <span class="sec-label ta-only">வருகை பதிவு</span>
+        <h2 class="sec-title en-only">Confirm Attendance</h2>
+        <h2 class="sec-title ta-only">வருகையை உறுதிப்படுத்துங்கள்</h2>
+        <p class="sec-subtitle en-only">We would be honoured by your presence</p>
+        <p class="sec-subtitle ta-only">உங்கள் வருகை எங்களுக்கு மகிழ்ச்சி</p>
+      </div>
+
+      <div class="rsvp-card reveal" style="transition-delay:.1s">
+        <div id="rsvp-form">
+          <p class="rsvp-note en-only">Please enter your name to confirm your attendance</p>
+          <p class="rsvp-note ta-only">உங்கள் பெயரை பதிவு செய்யுங்கள்</p>
+          <div class="rsvp-field">
+            <span class="rsvp-icon">🌸</span>
+            <input class="rsvp-input" id="rsvp-name" type="text" maxlength="50" placeholder="Full Name" autocomplete="name"/>
+          </div>
+          <div class="rsvp-err" id="rsvp-err">Please enter your name to proceed.</div>
+          <button class="rsvp-btn" id="rsvp-btn" onclick="submitRSVP()">
+            <span class="en-only">Confirm Attendance</span>
+            <span class="ta-only">வருகையை உறுதிப்படுத்து</span>
+          </button>
+          <div class="already-box" id="already-box"><span id="already-txt">You are already registered.</span></div>
+        </div>
+
+        <div class="rsvp-success" id="rsvp-success">
+          <div class="succ-icon">🎊</div>
+          <div class="succ-title en-only">Attendance Confirmed</div>
+          <div class="succ-title ta-only">வருகை உறுதிப்படுத்தப்பட்டது</div>
+          <div class="succ-name" id="succ-name">—</div>
+          <div class="succ-msg en-only">
+            Thank you — we look forward to celebrating with you.<br>
+            <strong style="color:var(--gold);">See you at Nedumaram! 🌿</strong>
+          </div>
+          <div class="succ-msg ta-only">
+            நன்றி — உங்களுடன் கொண்டாட ஆவலாக இருக்கிறோம்.<br>
+            <strong style="color:var(--gold);">நேடுமரம்மில் சந்திப்போம்! 🌿</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-names">Thilag Selbanthiran &amp; Umabharathi</div>
+    <div class="footer-sub">23 August 2026 · Nedumaram · Sivaganga District</div>
+    <div class="footer-leaves">🌿 · 💍 · 🌸</div>
+  </footer>
+
+</div><!-- /main -->
+
+<script>
+/* ════════════════════════════════════════════════════
+   ▼▼  CONFIGURATION — FILL BEFORE GOING LIVE  ▼▼
+════════════════════════════════════════════════════ */
+const GH_OWNER = 'YOUR_GITHUB_USERNAME';   // ← GitHub username
+const GH_REPO  = 'YOUR_REPO_NAME';         // ← GitHub repo name
+const _t1      = '';                        // ← First half of GitHub token
+const _t2      = '';                        // ← Second half of GitHub token
+const GH_TOKEN = _t1 + _t2;
+const PHONE_WA = '';                        // ← WhatsApp number with country code (e.g. 919876543210)
+const SITE_URL = 'https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME'; // ← Your site URL
+/* ════════════════════════════════════════════════════
+   ▲▲  END CONFIGURATION                         ▲▲
+════════════════════════════════════════════════════ */
+
+// shared message text
+function shareMsg(){
+  return(
+    `You're invited! 🌸\n\n`+
+    `C.C.T. Thilag Selbanthiran & S. Umabharathi — Wedding\n\n`+
+    `🛕 Muhurtham: Sunday, 23 Aug 2026 — 9:00 AM\n`+
+    `   Sri Malaiyarasi Amman Kovil, Nedumaram\n\n`+
+    `📍 Photos & Lunch from 10:30 AM\n`+
+    `   Alagappa Packiam Wedding Hall, Tirupattur\n\n`+
+    `View Invitation 👉 ${SITE_URL}`
+  );
+}
+
+// ── SHARE DRAWER ──
+function openShare(){
+  // build links fresh each time (SITE_URL may have been set)
+  const msg=encodeURIComponent(shareMsg());
+  const wa=PHONE_WA?`https://wa.me/${PHONE_WA}?text=${msg}`:`https://wa.me/?text=${msg}`;
+  document.getElementById('sd-wa').href=wa;
+  document.getElementById('sd-sms').href=`sms:?body=${msg}`;
+  if(navigator.share)document.getElementById('sd-native').style.display='flex';
+  document.getElementById('share-overlay').classList.add('on');
+  document.getElementById('share-panel').classList.add('on');
+}
+function closeShare(){
+  document.getElementById('share-overlay').classList.remove('on');
+  document.getElementById('share-panel').classList.remove('on');
+}
+function copyLink(){
+  navigator.clipboard.writeText(SITE_URL).catch(()=>{});
+  closeShare();
+  const t=document.getElementById('copy-toast');
+  t.classList.add('on');
+  setTimeout(()=>t.classList.remove('on'),2200);
+}
+function nativeShare(){
+  navigator.share&&navigator.share({
+    title:'Thilag & Umabharathi — Wedding Invitation',
+    text:'You are cordially invited! 23rd August 2026 · Nedumaram',
+    url:SITE_URL
+  }).catch(()=>{});
+  closeShare();
+}
+
+// ── WHATSAPP CHAT PRANK REVEAL ──
+const CHAT=[
+  {d:'in',  t:'8:14 AM', m:'Da wake up 😂'},
+  {d:'out', t:'8:15 AM', m:'What happened bro 😴\nenna ah early morning?'},
+  {d:'in',  t:'8:15 AM', m:'Konjam important news da 👀'},
+  {d:'out', t:'8:16 AM', m:'Enna news? okay sollu'},
+  {d:'in',  t:'8:16 AM', m:'August 23 free ah irukiya? 🤔'},
+  {d:'out', t:'8:16 AM', m:'Enna nadakuthu anga?'},
+  {d:'in',  t:'8:17 AM', m:'Naan kalyaanam pannikaren da 💍'},
+  {d:'out', t:'8:17 AM', m:'WHAT 🤯🤯🤯'},
+  {d:'out', t:'8:17 AM', m:'SERIOUS AH?!'},
+  {d:'in',  t:'8:18 AM', m:'Hahaha yes da! 23rd August 2026 🎊'},
+  {d:'out', t:'8:18 AM', m:'Yaaru yaaru?! Sollu!'},
+  {d:'in',  t:'8:18 AM', m:'Umabharathi 🌸'},
+  {d:'out', t:'8:19 AM', m:'Bro!! Congrats da!! 🥳🎉🎊'},
+  {d:'out', t:'8:19 AM', m:'Eppo decide pannaanga?!\nNaan theriyaamal polae 😂'},
+  {d:'in',  t:'8:20 AM', m:'Parents fix pannaanga...\nbut I\'m happy da 😄'},
+  {d:'out', t:'8:20 AM', m:'Okay okay! Wedding venue enga?'},
+  {d:'in',  t:'8:21 AM', m:'Sri Malaiyarasi Amman Kovil\nNedumaram, Sivaganga 🛕\nKaalai 9 AM sharp'},
+  {d:'out', t:'8:21 AM', m:'Okay! Lunch enga?'},
+  {d:'in',  t:'8:22 AM', m:'Alagappa Packiam Wedding Hall\nTirupattur — 10:30 AM onwards 🍽️'},
+  {d:'out', t:'8:22 AM', m:'Non veg iruka? 👀'},
+  {d:'in',  t:'8:22 AM', m:'Chicken and mutton da 🍗🥩\nFull spread! Happy ah now? 😂'},
+  {d:'out', t:'8:23 AM', m:'DEFINITELY COMING 😂🙌'},
+  {d:'in',  t:'8:23 AM', m:'Share pannu everyone kita also da!'},
+  {d:'in',  t:'8:24 AM', m:'🌸 Invitation details below 🌸\nScroll down paarunga!'},
+];
+let chatRunning=false;
+function initChat(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){runChat();obs.disconnect();}});
+  },{threshold:.25});
+  const s=document.getElementById('s-chat');
+  if(s)obs.observe(s);
+}
+function replayChat(){
+  if(chatRunning)return;
+  const area=document.getElementById('chat-area');
+  Array.from(area.querySelectorAll('.cmsg')).forEach(el=>el.remove());
+  document.getElementById('typing-dot').classList.remove('on');
+  area.scrollTop=0;
+  setTimeout(runChat,400);
+}
+function runChat(){
+  chatRunning=true;
+  const area=document.getElementById('chat-area');
+  const typing=document.getElementById('typing-dot');
+  let i=0;
+  function addBubble(msg){
+    const el=document.createElement('div');
+    el.className='cmsg '+msg.d;
+    el.innerHTML=msg.m.replace(/\n/g,'<br>')+'<span class="cmsg-time">'+msg.t+'</span>';
+    area.insertBefore(el,typing);
+    area.scrollTop=area.scrollHeight;
+  }
+  function next(){
+    if(i>=CHAT.length){chatRunning=false;return;}
+    const msg=CHAT[i];
+    if(msg.d==='in'){
+      typing.classList.add('on');
+      area.scrollTop=area.scrollHeight;
+      const delay=1000+msg.m.length*18+Math.random()*500;
+      setTimeout(()=>{
+        typing.classList.remove('on');
+        addBubble(msg);i++;
+        setTimeout(next,400+Math.random()*300);
+      },delay);
+    } else {
+      const delay=500+Math.random()*350;
+      setTimeout(()=>{addBubble(msg);i++;setTimeout(next,280+Math.random()*220);},delay);
+    }
+  }
+  next();
+}
+
+// ── STARFIELD on landing ──
+(function(){
+  const cvs=document.createElement('canvas');
+  cvs.style.cssText='position:absolute;inset:0;pointer-events:none;z-index:2;width:100%;height:100%;';
+  cvs.width=window.innerWidth;cvs.height=window.innerHeight;
+  const ctx=cvs.getContext('2d');
+  const stars=[];
+  for(let i=0;i<180;i++){
+    const r=Math.random()*1.3+.2;
+    const glow=Math.random()>.85;
+    stars.push({x:Math.random()*cvs.width,y:Math.random()*cvs.height,r,a:Math.random()*.65+.08,glow,color:Math.random()>.7?'rgba(232,184,109,':'rgba(240,240,255,'});
+  }
+  stars.forEach(s=>{
+    if(s.glow){ctx.shadowBlur=8;ctx.shadowColor=s.color+'0.6)';}
+    else{ctx.shadowBlur=0;}
+    ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    ctx.fillStyle=s.color+s.a+')';ctx.fill();
+  });
+  ctx.shadowBlur=0;
+  document.getElementById('landing').appendChild(cvs);
+})();
+
+// ── CONFETTI ──
+const cnv=document.getElementById('cc'),c2=cnv.getContext('2d');
+let W,H,pars=[];
+function rsz(){W=cnv.width=innerWidth;H=cnv.height=innerHeight;}
+rsz();window.addEventListener('resize',rsz);
+const CF=['#E8B86D','#F7D898','#2DD4AA','#70EDD6','#fff','#F2EEF8','#C2B2D8','#E8856A','#9B8FD0','#F0D8A8'];
+function mkCf(){
+  pars=[];const cx=W/2,cy=H*.52,m=W<768,ss=m?.5:1,gs=m?.4:1;
+  for(let i=0;i<200;i++){const a=Math.random()*Math.PI*2,sp=(Math.random()*22+7)*ss;pars.push({x:cx+(Math.random()-.5)*100,y:cy+(Math.random()-.5)*60,vx:Math.cos(a)*sp*.85,vy:-Math.abs(Math.sin(a)*sp)*(1.1+Math.random()),color:CF[Math.floor(Math.random()*CF.length)],rot:Math.random()*360,rv:(Math.random()-.5)*10,shape:Math.random()>.35?'rect':'circle',alpha:1,gravity:.22*gs,drag:.985,fr:m?.0025:.004,w:Math.random()*12+5,h:Math.random()*5+2,r:Math.random()*3+2});}
+}
+function dp(p){c2.save();c2.translate(p.x,p.y);c2.rotate(p.rot*Math.PI/180);c2.globalAlpha=Math.max(0,p.alpha);c2.fillStyle=p.color;if(p.shape==='circle'){c2.beginPath();c2.arc(0,0,p.r,0,Math.PI*2);c2.fill();}else c2.fillRect(-p.w/2,-p.h/2,p.w,p.h);c2.restore();}
+let cfOn=false,cfId=null;
+function animCf(){if(!cfOn){c2.clearRect(0,0,W,H);return;}c2.clearRect(0,0,W,H);let alive=false;pars.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=p.gravity;p.vx*=p.drag;p.vy*=p.drag;p.rot+=p.rv;p.alpha-=p.y>H*.25?p.fr:p.fr*.3;if(p.alpha>0){alive=true;dp(p);}});if(alive)cfId=requestAnimationFrame(animCf);else{c2.clearRect(0,0,W,H);cfOn=false;}}
+function fireConfetti(){if(cfId)cancelAnimationFrame(cfId);mkCf();cfOn=true;animCf();setTimeout(()=>{cfOn=false;},5500);}
+
+// ── ENTER SITE ──
+function enterSite(){
+  fireConfetti();window.scrollTo(0,0);
+  const m=window.innerWidth<768;
+  setTimeout(()=>{document.getElementById('landing').classList.add('exit');document.getElementById('main').classList.add('on');},m?900:700);
+  setTimeout(()=>{
+    document.getElementById('landing').style.display='none';
+    window.scrollTo(0,0);initReveal();initChat();startCountdown();tryLoadRSVP();
+    const sh=document.getElementById('scroll-hint');
+    sh.classList.add('on');setTimeout(()=>sh.classList.remove('on'),3000);
+    document.getElementById('share-fab').classList.add('on');
+  },m?2700:2300);
+}
+
+// ── SCROLL REVEAL + PROGRESS ──
+function initReveal(){
+  const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis');});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  window.addEventListener('scroll',()=>{
+    const d=document.documentElement,b=document.body;
+    const st=d.scrollTop||b.scrollTop,sh=(d.scrollHeight||b.scrollHeight)-d.clientHeight;
+    document.getElementById('progress-line').style.width=(sh>0?Math.round(st/sh*100):0)+'%';
+  },{passive:true});
+}
+
+// ── LANGUAGE ──
+function setLang(l){
+  document.body.setAttribute('data-lang',l);
+  document.querySelectorAll('.lb').forEach(b=>b.classList.remove('on'));
+  document.querySelector(`.lb[onclick="setLang('${l}')"]`).classList.add('on');
+}
+
+// ── COUNTDOWN — target: 23 Aug 2026, 9:00 AM IST = 2026-08-23T03:30:00Z ──
+let cdStarted=false;
+function startCountdown(){
+  if(cdStarted)return;cdStarted=true;
+  const target=new Date('2026-08-23T03:30:00Z');
+  const pad=n=>String(n).padStart(2,'0');
+  function sv(id,val){const el=document.getElementById(id);if(!el||el.textContent===val)return;el.textContent=val;el.classList.remove('pop');void el.offsetWidth;el.classList.add('pop');}
+  (function tick(){
+    const diff=target-new Date();
+    if(diff<=0){['cd-d','cd-h','cd-m','cd-s'].forEach(id=>sv(id,'00'));const d=document.getElementById('cd-done');if(d)d.style.display='block';return;}
+    sv('cd-d',pad(Math.floor(diff/86400000)));sv('cd-h',pad(Math.floor((diff%86400000)/3600000)));
+    sv('cd-m',pad(Math.floor((diff%3600000)/60000)));sv('cd-s',pad(Math.floor((diff%60000)/1000)));
+    setTimeout(tick,500);
+  })();
+}
+
+// ── GOOGLE CALENDAR ──
+const CAL={
+  ceremony:{title:'Thilag & Umabharathi — Wedding Ceremony (Muhurtham)',desc:'Muhurtham: 9:00 AM – 10:30 AM IST\nSri Malaiyarasi Amman Kovil, Nedumaram, Sivaganga',location:'Sri Malaiyarasi Amman Kovil, Nedumaram, Sivaganga District, Tamil Nadu',start:'20260823T033000Z',end:'20260823T050000Z'},
+  hall:{title:'Thilag & Umabharathi — Photos & Lunch',desc:'Photos & Lunch from 10:30 AM IST\nAlagappa Packiam Wedding Hall, Tirupattur, Sivaganga',location:'Alagappa Packiam Wedding Hall, Tirupattur, Sivaganga District, Tamil Nadu',start:'20260823T050000Z',end:'20260823T083000Z'}
+};
+function addToCalendar(type){
+  const e=CAL[type];
+  const url='https://calendar.google.com/calendar/render?action=TEMPLATE'+'&text='+encodeURIComponent(e.title)+'&dates='+e.start+'/'+e.end+'&details='+encodeURIComponent(e.desc)+'&location='+encodeURIComponent(e.location)+'&sf=true&output=xml';
+  const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';
+  document.body.appendChild(a);a.click();document.body.removeChild(a);return false;
+}
+
+// ── GITHUB RSVP ──
+const GH_API=`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/attendees.json`;
+async function fetchA(){try{const r=await fetch(GH_API,{headers:{'Authorization':`token ${GH_TOKEN}`,'Accept':'application/vnd.github.v3+json'}});if(r.status===404)return{list:[],sha:null};const d=await r.json();return{list:JSON.parse(atob(d.content.replace(/\n/g,''))),sha:d.sha};}catch(e){return{list:[],sha:null};}}
+async function saveA(list,sha){const content=btoa(unescape(encodeURIComponent(JSON.stringify(list,null,2))));const body={message:`RSVP: ${list[list.length-1]?.name||'Guest'} confirmed`,content,...(sha&&{sha})};const r=await fetch(GH_API,{method:'PUT',headers:{'Authorization':`token ${GH_TOKEN}`,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});return r.ok;}
+function getLocal(){try{return JSON.parse(localStorage.getItem('rsvp_thilag')||'null');}catch(e){return null;}}
+function setLocal(e){try{localStorage.setItem('rsvp_thilag',JSON.stringify(e));}catch(e){}}
+
+async function submitRSVP(){
+  const nameEl=document.getElementById('rsvp-name'),errEl=document.getElementById('rsvp-err'),btn=document.getElementById('rsvp-btn');
+  const name=nameEl.value.trim();errEl.classList.remove('show');
+  if(!name){errEl.classList.add('show');nameEl.focus();return;}
+  btn.disabled=true;btn.textContent='Saving…';
+  try{
+    const{list,sha}=await fetchA();
+    const already=list.find(g=>g.name.toLowerCase()===name.toLowerCase());
+    if(already){btn.disabled=false;btn.textContent='Confirm Attendance';document.getElementById('already-txt').textContent=`${name} — you are already registered.`;document.getElementById('already-box').classList.add('show');return;}
+    const entry={name,time:new Date().toLocaleString('en-IN',{timeZone:'Asia/Kolkata'}),lang:document.body.getAttribute('data-lang')};
+    list.push(entry);const ok=await saveA(list,sha);if(ok)setLocal(entry);
+    showSuccess(name);fireConfetti();
+  }catch(e){showSuccess(name);fireConfetti();}
+}
+
+function showSuccess(name){
+  document.getElementById('rsvp-form').style.display='none';
+  document.getElementById('rsvp-success').style.display='block';
+  document.getElementById('succ-name').textContent=name;
+}
+
+let rsvpLoaded=false;
+function tryLoadRSVP(){if(rsvpLoaded)return;rsvpLoaded=true;const l=getLocal();if(l){document.getElementById('rsvp-form').style.display='none';showSuccess(l.name);}}
+</script>
+</body>
+</html>
